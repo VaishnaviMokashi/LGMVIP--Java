@@ -1,0 +1,101 @@
+class tictactoe{
+    
+    public char array[][] = { { '-', '-', '-' },
+                               { '-', '-', '-' },
+                              { '-', '-', '-' } };
+
+    public void print2D() {
+        // Loop through all rows
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("\n");
+            // Loop through all elements of current row
+            for (int j = 0; j < array[i].length; j++)
+                System.out.print(array[i][j] + " ");
+
+        }
+    }
+
+    public int return_winner() {
+        for (int i = 0; i <= 2; i++) // colum
+        {
+            // check vertical LINE
+            if ((array[i][0] == 'O') && (array[i][1] == 'O') && (array[i][2] == 'O')) {
+                System.out.println("Vertical Ditected");
+                return 2;
+            }
+
+        }
+
+        for (int j = 0; j <= 2; j++) // row
+        {
+            // check horizontal line
+            if (array[0][j] == 'O' && array[1][j] == 'O' && array[2][j] == 'O') {
+                System.out.println("Horizontal  Ditected");
+                return 2;
+            }
+        }
+
+        // digonals of style \
+        if (array[0][0] == 'O' && array[1][1] == 'O' && array[2][2] == 'O') {
+            System.out.println("Diagonal Ditected");
+            return 2;
+        }
+
+        // digonals of style /
+        if (array[0][2] == 'O' && array[1][1] == 'O' && array[2][0] == 'O') {
+            return 2;
+        }
+        
+        for (int i = 0; i <= 2; i++) // colum
+        {
+            // check vertical LINE
+            if ((array[i][0] == 'X') && (array[i][1] == 'X') && (array[i][2] == 'X')) {
+                System.out.println("Vertical Ditected");
+                return 1;
+            }
+
+        }
+
+        for (int j = 0; j <= 2; j++) // row
+        {
+            // check horizontal line
+            if (array[0][j] == 'X' && array[1][j] == 'X' && array[2][j] == 'X') {
+                System.out.println("Horizontal  Ditected");
+                return 1;
+            }
+        }
+
+        // digonals of style \
+        if (array[0][0] == 'X' && array[1][1] == 'X' && array[2][2] == 'X') {
+            System.out.println("Diagonal Ditected");
+            return 1;
+        }
+
+        // digonals of style /
+        if (array[0][2] == 'X' && array[1][1] == 'X' && array[2][0] == 'X') {
+            return 1;
+        }
+
+        return -1;
+    }
+    public void reset()
+    {
+        this.array[0][0]= '-';
+        this.array[0][1]= '-';
+        this.array[0][2]= '-';
+        this.array[1][0]= '-';
+        this.array[1][1]= '-';
+        this.array[1][2]= '-';
+        this.array[2][0]= '-';
+        this.array[2][1]= '-';
+        this.array[2][2]= '-';
+        
+    }
+    
+}
+public class TICTACTOA {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
