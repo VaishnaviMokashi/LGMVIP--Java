@@ -1,0 +1,73 @@
+import java.util.*;
+
+class converter
+{
+    public static void main(String[] args)
+    {
+        Scanner enter = new Scanner(System.in);
+        System.out.println("This is Currency Converter");
+        System.out.println("1) Rupees To Dollar,Euro,Yen");
+        System.out.println("2) Dollar To Rupee,Euro,Yen");
+        System.out.println("3) Euro To Rupee,Dollar,Yen");
+        System.out.println("4) Yen To Dollar,Euro,Rupee");
+        System.out.println("5) Exit");
+        System.out.println("Enter your choice");
+        int ch=enter.nextInt();
+        switch(ch)
+        {
+            case 1: 
+            {
+            System.out.println("Enter rupees");
+            double rupee=enter.nextDouble();
+            double ans = rupee/74.74;
+            double ans1 = rupee/86.04;
+            double ans2 = rupee/0.62;
+            System.out.println("Amount in dollar is: "+ans);
+            System.out.println("Amount in euro is: "+ans1);
+            System.out.println("Amount in yen is: "+ans2);
+            break;
+            }
+            case 2: 
+            {
+            System.out.println("Enter dollar");
+            double dollar=enter.nextDouble();
+            double ans = dollar*88.99;
+            double ans1 = dollar*0.91;
+            double ans2 = dollar*133.85;
+            System.out.println("Amount in rupee is: "+ans);
+            System.out.println("Amount in euro is: "+ans1);
+            System.out.println("Amount in yen is: "+ans2);
+            break;
+            }
+            case 3:
+            {
+            System.out.println("Enter euro");
+            double euro=enter.nextDouble();
+            double ans = euro*86.04;
+            double ans1 = euro*1.10;
+            double ans2 = euro*146.69;
+            System.out.println("Amount in rupee is: "+ans);
+            System.out.println("Amount in dollar is: "+ans1);
+            System.out.println("Amount in yen is: "+ans2);
+            break;
+            }
+            case 4:
+            {
+            System.out.println("Enter yen");
+            double yen=enter.nextDouble();
+            double ans = yen*0.0075;
+            double ans1 = yen*0.0068;
+            double ans2 = yen*0.62;
+            System.out.println("Amount in dollar is: "+ans);
+            System.out.println("Amount in euro is: "+ans1);
+            System.out.println("Amount in rupee is: "+ans2);
+            break;
+            }
+            case 5:
+            {
+            System.out.println("Thank you for using this currency converter"); 
+            break; 
+            }
+        }
+    }
+}
